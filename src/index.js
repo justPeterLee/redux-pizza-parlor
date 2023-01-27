@@ -23,7 +23,7 @@ const pizzaOrder = (state =[ ], action) => {
     else if(action.type === 'REMOVE_PIZZA_ORDER') {
         for(let i = 0; i < state.length; i++) {
             if(action.payload.id === state[i].id) {
-                state[i] = '';
+                state.splice(i, 1);
                 return state;
             }
         }
