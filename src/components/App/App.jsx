@@ -6,6 +6,8 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 // components & styling
 import SelectPizza from "../SelectPizza/SelectPizza";
 import Info from "../Info/Info";
+import Checkout from "../Checkout/Checkout";
+import Admin from "../Admin/Admin";
 import "./App.css";
 
 
@@ -42,6 +44,15 @@ function App() {
       <Route path='/info'>
         <Info />
       </Route>
+
+      <Route path='/checkout'>
+        <Checkout />
+      </Route>
+
+      <Route path='/admin'>
+        <Admin />
+      </Route>
+    
     </Router>
   );
 }

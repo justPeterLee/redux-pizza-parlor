@@ -41,7 +41,7 @@ const addCustomer = (state = 0, action) => {
         return state
     }
 
-    console.log(state)
+    //console.log(state)
 
 
     // return state

@@ -17,7 +17,7 @@ function PizzaItem(props) {
     let newTotal = parseFloat(currPrice) + parseFloat(price);
     console.log(newTotal)
     dispatch({type:'SET_ORDER', payload: newTotal})
-    dispatch({type:'ADD_PIZZA_ORDER', payload: {id: id, quantity: 1}})
+    dispatch({type:'ADD_PIZZA_ORDER', payload: {id: id, quantity: 1, name: props.name, cost: props.price}})
   }
 
   function sub(price, id) {
@@ -27,7 +27,7 @@ function PizzaItem(props) {
     let newTotal = parseFloat(currPrice) - parseFloat(price);
     console.log(newTotal)
     dispatch({type:'SET_ORDER', payload: newTotal})
-    dispatch({type:'REMOVE_PIZZA_ORDER', payload: {id: id, quantity: 1}})
+    dispatch({type:'REMOVE_PIZZA_ORDER', payload: {id: id, quantity: 1, name: props.name, cost: props.price}})
   }
   return (
     <>
